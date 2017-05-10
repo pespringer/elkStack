@@ -20,4 +20,5 @@
  Build Dockerfile created so we're not reliant upon Elastic.co images
  Create scripts for building images / running docker-compose
  Implement remote image management like Registry or Artifactory for image storage
+ Create build script for Dockerfile build - script created but Dockerfile still being worked on
 
