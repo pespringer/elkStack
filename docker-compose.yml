@@ -8,18 +8,6 @@ elasticsearch:
    - "9200:9200"
    - "9300:9300"
 
-#logcourier:
-#  image: registry.cloud.cas.org/cerberus/logcourier:20170503-140607
-#  labels:
-#    container-role: logcourier
-#  container_name: logcourier
-#  restart: always
-#  ports:
-#   - "5001:5001"
-#   - "5001:5001/udp"
-#  links:
-#   - logstash
-
 logstash:
   image: docker.elastic.co/logstash/logstash:5.2.1
   labels:
@@ -41,11 +29,3 @@ kibana:
    - elasticsearch
   ports:
    - "5601:5601"
-
-#refresh-kibana-indices:
-#  image: registry.cloud.cas.org/cerberus/refresh-kibana-indices:20170309-163731
-#  labels:
-#    container-role: refresh-kibana-indices
-#  container_name: refresh-kibana-indices
-#  links:
-#   - elasticsearch
